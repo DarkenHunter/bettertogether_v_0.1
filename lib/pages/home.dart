@@ -48,9 +48,7 @@ class home extends StatelessWidget {
               color: HexColor('#FF5400'),
             ),
             onTap: (){
-              Navigator.push(
-                context, MaterialPageRoute(
-                  builder: (context) => six_pack_challange()),);
+              Navigator.pushNamed(context, '/back_&_bicep');
               },
 
           ),
@@ -62,9 +60,7 @@ class home extends StatelessWidget {
               color: HexColor('#FF5400'),
             ),
               onTap: () {
-                Navigator.push(
-                  context, MaterialPageRoute(
-                    builder: (context) => build_your_muscle()),);
+                Navigator.pushNamed(context, '/chest_&_tricep');
               },
           ),
           InkWell(

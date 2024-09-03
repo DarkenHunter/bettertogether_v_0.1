@@ -2,6 +2,8 @@ import 'package:bettertogether_2/Theme/theme.dart';
 import 'package:bettertogether_2/pages/exercise/back_and_bicep_workouts.dart';
 import 'package:bettertogether_2/pages/home.dart';
 import 'package:bettertogether_2/pages/workout.dart';
+import 'package:bettertogether_2/pages/workouts/back_and_bicep.dart';
+import 'package:bettertogether_2/pages/workouts/chest_and_tricep.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -34,6 +36,8 @@ class MyApp extends StatelessWidget {
           '/jumpingjacks': (context) => jumpingjacks(),
           '/arm_circles_clockwise': (context) => arm_circles_clockwise(),
           '/NavigationMenu': (context) => NavigationMenu(),
+          '/back_&_bicep': (context) => back_and_bicep(),
+          '/chest_&_tricep': (context) => chest_and_tricep(),
         },
       ),
     );
