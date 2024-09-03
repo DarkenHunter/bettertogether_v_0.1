@@ -41,11 +41,7 @@ class legs_and_delts extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: (){
-          Navigator.push(
-            context, MaterialPageRoute(
-              builder: (context) => TimerPage()
-          ),
-          );
+          Navigator.pushNamed(context, '/jumpingjacks');
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(64)),
         backgroundColor: Theme.of(context).colorScheme.primary,

@@ -15,7 +15,18 @@ import '../pages/discover/build_your_muscle.dart';
 
 
 class TimerPage extends StatelessWidget {
-  const TimerPage({super.key});
+  final String contentname;
+  final String contentt_img;
+  final String prev_link;
+  final String next_link;
+
+  const TimerPage({
+    super.key,
+    required this.contentname,
+    required this.contentt_img,
+    required this.prev_link,
+    required this.next_link,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +74,7 @@ class TimerPage extends StatelessWidget {
                 color: Colors.red,
                 image: DecorationImage(
                     image: NetworkImage(
-                        'https://images.unsplash.com/photo-1568614422084-ea8aeefd4e58?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                        contentt_img),
                     fit: BoxFit.cover),
                 boxShadow: [
                   BoxShadow(
@@ -84,7 +95,7 @@ class TimerPage extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 16),
-                        child: Text('Jumping Jacks', style:
+                        child: Text(contentname, style:
                         GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -119,9 +130,7 @@ class TimerPage extends StatelessWidget {
                             children: <Widget>[
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(
-                                    context, MaterialPageRoute(
-                                      builder: (context) => build_your_muscle()),);
+                                  Navigator.pushNamed(context, prev_link);
                                 },
                                 child: Container(
                                   height: 50,
@@ -192,9 +201,7 @@ class TimerPage extends StatelessWidget {
                               const SizedBox(width: 30),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(
-                                    context, MaterialPageRoute(
-                                      builder: (context) => jumpingjacks()),);
+                                  Navigator.pushNamed(context, next_link);
                                 },
                                 child: Container(
                                   height: 50,
